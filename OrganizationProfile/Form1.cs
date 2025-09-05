@@ -99,9 +99,9 @@ namespace OrganizationProfile
                     throw new ArgumentNullException("Name fields cannot be empty.");
                 }
 
-                if (Regex.IsMatch(LastName, @"^[a-zA-Z]+$") &&
-                    Regex.IsMatch(FirstName, @"^[a-zA-Z]+$") &&
-                    Regex.IsMatch(MiddleInitial, @"^[a-zA-Z]+$"))
+                if (Regex.IsMatch(LastName, @"^[a-zA-Z ]+$") &&
+                    Regex.IsMatch(FirstName, @"^[a-zA-Z ]+$") &&
+                    Regex.IsMatch(MiddleInitial, @"^[a-zA-Z ]+$"))
                 {
                     _FullName = LastName + ", " + FirstName + " " + MiddleInitial;
                 }
