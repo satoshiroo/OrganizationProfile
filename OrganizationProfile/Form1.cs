@@ -16,5 +16,10 @@ namespace OrganizationProfile
         {
             InitializeComponent();
         }
+
+        private void OrganizationalForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

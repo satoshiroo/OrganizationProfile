@@ -261,6 +261,7 @@
             this.Controls.Add(this.label1);
             this.Name = "OrganizationalForm";
             this.Text = "Organizational Profile";
+            this.Load += new System.EventHandler(this.OrganizationalForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
