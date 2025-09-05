@@ -45,7 +45,7 @@
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.txtMiddleInitial = new System.Windows.Forms.TextBox();
             this.txtContactNo = new System.Windows.Forms.TextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePicker = new System.Windows.Forms.DateTimePicker();
             this.cbGender = new System.Windows.Forms.ComboBox();
             this.cbProgram = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
@@ -159,6 +159,7 @@
             this.btnRegister.TabIndex = 10;
             this.btnRegister.Text = "Register";
             this.btnRegister.UseVisualStyleBackColor = true;
+            this.btnRegister.Click += new System.EventHandler(this.btnRegister_Click);
             // 
             // txtStudentNo
             // 
@@ -208,13 +209,13 @@
             this.txtContactNo.Size = new System.Drawing.Size(148, 22);
             this.txtContactNo.TabIndex = 16;
             // 
-            // dateTimePicker1
+            // dateTimePicker
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(165, 233);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(301, 26);
-            this.dateTimePicker1.TabIndex = 17;
+            this.dateTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker.Location = new System.Drawing.Point(165, 233);
+            this.dateTimePicker.Name = "dateTimePicker";
+            this.dateTimePicker.Size = new System.Drawing.Size(301, 26);
+            this.dateTimePicker.TabIndex = 17;
             // 
             // cbGender
             // 
@@ -241,7 +242,7 @@
             this.ClientSize = new System.Drawing.Size(800, 375);
             this.Controls.Add(this.cbProgram);
             this.Controls.Add(this.cbGender);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dateTimePicker);
             this.Controls.Add(this.txtContactNo);
             this.Controls.Add(this.txtMiddleInitial);
             this.Controls.Add(this.txtFirstName);
@@ -286,7 +287,7 @@
         private System.Windows.Forms.TextBox txtFirstName;
         private System.Windows.Forms.TextBox txtMiddleInitial;
         private System.Windows.Forms.TextBox txtContactNo;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker;
         private System.Windows.Forms.ComboBox cbGender;
         private System.Windows.Forms.ComboBox cbProgram;
     }

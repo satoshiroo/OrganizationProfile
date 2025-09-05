@@ -6,10 +6,11 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static OrganizationProfile.Program;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using System.Text.RegularExpressions;
 
 namespace OrganizationProfile
 {
@@ -79,7 +80,35 @@ namespace OrganizationProfile
                 cbProgram.Items.Add(ListOfProgram[i].ToString());
             }
 
+            cbGender.Items.Add("Male");
+            cbGender.Items.Add("Female");
+            cbGender.Items.Add("Prefer not to say");
+        }
 
+        private void btnRegister_Click(object sender, EventArgs e)
+        {
+            string Capitalize(string input)
+            {
+                if (string.IsNullOrWhiteSpace(input))
+                    return string.Empty;
+
+                input = input.Trim().ToLower(); // lowercase everything
+                return char.ToUpper(input[0]) + input.Substring(1);
+            }
+
+
+            StudentInformationClass.SetFullName = FullName(Capitalize(txtLastName.Text),
+            Capitalize(txtFirstName.Text), Capitalize(txtMiddleInitial.Text));
+
+            StudentInformationClass.SetStudentNo = (int)StudentNumber(txtStudentNo.Text);
+            StudentInformationClass.SetProgram = cbProgram.Text;
+            StudentInformationClass.SetGender = cbGender.Text;
+            StudentInformationClass.SetContactNo = (long)ContactNo(txtContactNo.Text);
+            StudentInformationClass.SetAge = Age(txtAge.Text);
+            StudentInformationClass.SetBirthday = dateTimePicker.Value.ToString("yyyyMM-dd");
+
+            frmConfirmation frm = new frmConfirmation();
+            frm.ShowDialog();
         }
     }
 }
