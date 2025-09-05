@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OrganizationProfile
 {
-    public partial class OrganizationalForm : Form
+    public partial class frmRegistration : Form
     {
-        public OrganizationalForm()
+        public frmRegistration()
         {
             InitializeComponent();
         }

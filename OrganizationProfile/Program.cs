@@ -16,7 +16,17 @@ namespace OrganizationProfile
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new OrganizationalForm());
+            Application.Run(new frmRegistration());
+        }
+
+        public class StudentInformationClass
+        {
+            public int SetStudentNo = 0;
+            public int SetContactNo = 0;
+            public string SetProgram = "";
+            public string SetGender = "";
+            public string SetBirthday = "";
+            public string SetFullName = "";
         }
     }
 }
